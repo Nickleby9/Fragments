@@ -11,13 +11,15 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import java.util.Random;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HelloFragment extends Fragment implements View.OnClickListener {
 
-    Button button1;
+    Button btnClick;
     FrameLayout layout;
 
     @Override
@@ -26,17 +28,21 @@ public class HelloFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_hello, container, false);
 
-        button1 = (Button) v.findViewById(R.id.button1);
+        btnClick = (Button) v.findViewById(R.id.btnClick);
         layout = (FrameLayout) v.findViewById(R.id.layout);
 
-        button1.setOnClickListener(this);
+        btnClick.setOnClickListener(this);
 
         return v;
     }
 
     @Override
     public void onClick(View v) {
-        layout.setBackgroundColor(Color.BLUE);
-        Toast.makeText(getContext(), "Color has been changed", Toast.LENGTH_SHORT).show();
+        Random rand = new Random();
+        int r = rand.nextInt(255);
+        int g = rand.nextInt(255);
+        int b = rand.nextInt(255);
+
+        layout.setBackgroundColor(Color.rgb(r,g,b));
     }
 }
