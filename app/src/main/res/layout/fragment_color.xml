@@ -3,15 +3,8 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hilay.edu.fragments.HelloFragment">
+    tools:context="hilay.edu.fragments.ColorFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <Button
-        android:id="@+id/btnClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_vertical"
-        android:text="Button" />
 
 </FrameLayout>

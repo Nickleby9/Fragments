@@ -6,30 +6,60 @@
     android:layout_height="match_parent"
     tools:context="hilay.edu.fragments.MainActivity">
 
-    <fragment
-        android:id="@+id/frag"
-        android:name="hilay.edu.fragments.HelloFragment"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="frag1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="frag3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="frag2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        tools:text="2" />
+
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="0dp"
+        android:background="?android:attr/colorControlHighlight"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_hello" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="hilay.edu.fragments.ImageFragment"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout="@layout/fragment_image" />
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
